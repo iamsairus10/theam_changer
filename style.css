@@ -1,15 +1,76 @@
-body{
-
-    margin-top: 150px;
+body {
+    font-family: "Commissioner", sans-serif;
+    margin-top: 0;
     text-align: center;
-    padding: 25px;
-    background-color:chartreuse;
+    padding: 0;
+    background-color: chartreuse;
     color: black;
     font-size: 25px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .drk {
     background-color: black;
     color: white;
     font-weight: bold;
-  }
+}
+
+.drk button{
+    box-shadow: 0px 8px 15px rgba(255, 255, 255, 0.6);
+}
+
+p span{
+    font-style: italic;
+    font-size: 22px;
+    margin-right: 4px;
+}
+
+h2{
+    margin: 7rem auto;
+}
+
+button {
+    width: 170px;
+    height: 45px;
+    background-color: #fff;
+    margin: auto;
+    font-size: 22px;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+    letter-spacing: 2.5px;
+    display: block;
+    outline: none;
+
+    /*CSS to confine the span ripple within the button */
+    position: relative;
+    overflow: hidden; 
+}
+
+/* CSS of span ripple*/
+button span { 
+    position: absolute; 
+    border-radius: 50%; 
+    background-color: rgba(0, 0, 0, 0.3); 
+
+    width: 10px; 
+    height: 10px;
+
+    animation: ripple 1s; 
+    opacity: 0; 
+} 
+
+/* ripple animation */
+@keyframes ripple { 
+    from { 
+        opacity: 1; 
+        transform: scale(0); 
+    } 
+
+    to { 
+        opacity: 0; 
+        transform: scale(75); 
+    } 
+}
